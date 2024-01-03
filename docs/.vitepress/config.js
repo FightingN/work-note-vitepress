@@ -6,49 +6,71 @@ module.exports = {
     sidebar: {
       "/frontend/css/": [
         {
-          text: "CSS相关",
+          text: "CSS",
           items: [
             {
-              text: "css相关",
-              link: "/frontend/css/css-summary",
+              text: "CSS问题记录",
+              link: "/frontend/css/css-question",
             },
           ],
-        },
+        }
+      ],
+      "/frontend/js/": [
         {
-          text: "CSS相关2",
+          text: "JS",
           items: [
             {
-              text: "css相关",
-              link: "/frontend/css/css-advanced",
+              text: "常用方法封装",
+              link: "/frontend/js/js-method",
             },
           ],
-        },
+        }
+      ],
+      "/frontend/es6/": [
+        {
+          text: "ES6",
+          items: [
+            {
+              text: "数组相关",
+              link: "/frontend/es6/es6-arr",
+            },
+          ],
+        }
       ],
       "/frontend/vue/": [
         {
-          text: "vue2总结",
+          text: "vue2问题相关",
           items: [
             {
-              text: "vue相关",
-              link: "/frontend/vue/vue-basics",
+              text: "问题记录",
+              link: "/frontend/vue/vue-question",
             },
           ],
         },
         {
-          text: "vue3学习",
+          text: "vue2知识点相关",
           items: [
             {
-              text: "vue3学习",
-              link: "/frontend/vue/vue3-base",
+              text: "知识点记录",
+              link: "/frontend/vue/vue-study",
             },
           ],
         },
         {
-          text: "vue3总结",
+          text: "vue3问题相关",
           items: [
             {
-              text: "vue3总结",
-              link: "/frontend/vue/vue3-summary",
+              text: "问题记录",
+              link: "/frontend/vue/vue3-question",
+            },
+          ],
+        },
+        {
+          text: "vue3知识点相关",
+          items: [
+            {
+              text: "知识点记录",
+              link: "/frontend/vue/vue3-study",
             },
           ],
         },

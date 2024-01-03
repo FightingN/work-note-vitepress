@@ -7,12 +7,20 @@ module.exports = [
     text: "前端知识",
     items: [
       {
-        text: "css",
-        link: "/frontend/css/css-summary",
+        text: "CSS",
+        link: "/frontend/css/css-question",
       },
       {
-        text: "vue",
-        link: "/frontend/vue/vue-basics",
+        text: "JS",
+        link: "/frontend/js/js-method",
+      },
+      {
+        text: "ES6",
+        link: "/frontend/es6/es6-arr",
+      },
+      {
+        text: "Vue",
+        link: "/frontend/vue/vue-question",
       },
     ],
   },
