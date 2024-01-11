@@ -24,4 +24,13 @@ module.exports = [
       },
     ],
   },
+  {
+    text: "其他",
+    items: [
+      {
+        text: "正则校验",
+        link: "/other/regular/regular-check",
+      },
+    ],
+  },
 ];

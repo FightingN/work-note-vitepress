@@ -13,7 +13,7 @@ module.exports = {
               link: "/frontend/css/css-question",
             },
           ],
-        }
+        },
       ],
       "/frontend/js/": [
         {
@@ -24,7 +24,7 @@ module.exports = {
               link: "/frontend/js/js-method",
             },
           ],
-        }
+        },
       ],
       "/frontend/es6/": [
         {
@@ -35,7 +35,7 @@ module.exports = {
               link: "/frontend/es6/es6-arr",
             },
           ],
-        }
+        },
       ],
       "/frontend/vue/": [
         {
@@ -71,6 +71,17 @@ module.exports = {
             {
               text: "知识点记录",
               link: "/frontend/vue/vue3-study",
+            },
+          ],
+        },
+      ],
+      "/other/regular/": [
+        {
+          text: "正则规则",
+          items: [
+            {
+              text: "通用正则",
+              link: "/other/regular/regular-check",
             },
           ],
         },
