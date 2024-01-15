@@ -1,6 +1,7 @@
-## 全局修改element弹框样式
+## 全局修改element弹框默认的样式
 ```css
-/* vue3 全局修改element弹框样式 */
+/* vue3修改：在项目src > assets > styles > element-ui.scss 文件下写入以下代码 */
+
 .el-dialog__header{
   text-align: center;
 }
@@ -47,10 +48,10 @@
 }
 ```
 
-## 页面头部搜索样式调整
+## 页面顶部高级搜索样式调整
 ```css
-/* vue3 页面头部搜索样式调整 */
-/* 在页面头部搜索的表单中添加class类名为'search-form-all'即可 */
+/* vue3修改：*/
+/* 1.在项目src > assets > styles > element-ui.scss 文件下写入以下代码 */
 .search-form-all{
   .el-form-item{
     margin-right: 10px;
@@ -88,10 +89,22 @@
   }
 }
 ```
+```html
+<!-- 2.在页面顶部搜索的表单中添加class类名为'search-form-all'即可 -->
+<el-form :model="queryParams" class="search-form-all" ref="queryRef" :inline="true" label-width="70px">
+  <el-form-item label="项目名称" prop="projectName">
+    <el-input v-model.trim="queryParams.projectName" placeholder="请输入项目名称" maxlength="20" clearable @keyup.enter="handleQuery" />
+  </el-form-item>
+  <el-form-item>
+    <el-button type="primary" icon="Search" @click="handleQuery">搜索</el-button>
+    <el-button icon="Refresh" @click="resetQuery">重置</el-button>
+  </el-form-item>
+</el-form>
+```
 
 ## 全局强改颜色样式
 ```css
-/* vue2 颜色强制修改 */
+/* vue2修改：在项目src > assets > styles > element-ui.scss 文件下写入以下代码 */
 .el-button.btn_addAll{
   color: #ff5500 !important;
 }
