@@ -31,6 +31,10 @@ module.exports = [
         text: "正则校验",
         link: "/other/regular/regular-check",
       },
+      {
+        text: "网站安全",
+        link: "/other/safety/safety",
+      },
     ],
   },
 ];

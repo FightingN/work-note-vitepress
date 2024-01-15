@@ -86,6 +86,17 @@ module.exports = {
           ],
         },
       ],
+      "/other/safety/": [
+        {
+          text: "网站安全",
+          items: [
+            {
+              text: "网站安全",
+              link: "/other/safety/safety",
+            },
+          ],
+        },
+      ],
     },
   },
 };
