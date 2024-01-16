@@ -64,5 +64,51 @@
 
   知识点相关
 
-  [1.知识点记录](./frontend/vue/vue3-study.md)
+  [1.setup](./frontend/vue/vue3-study.html#setup)
+
+  [2.ref](./frontend/vue/vue3-study.html#ref)
+
+  [3.reactive](./frontend/vue/vue3-study.html#reactive)
+
+  [4.toRefs](./frontend/vue/vue3-study.html#torefs)
+
+  [5.生命周期钩子](./frontend/vue/vue3-study.html#生命周期钩子)
+
+  [6.watch](./frontend/vue/vue3-study.html#watch)
+
+  [7.watchEffect](./frontend/vue/vue3-study.html#watcheffect)
+
+  [8.watch和watchEffect区别](./frontend/vue/vue3-study.html#watch-和-watcheffect-区别)
+
+  [9.watch回调中的DOM](./frontend/vue/vue3-study.html#watch-回调中的-dom)
+
+  [10.手动停止监听器](./frontend/vue/vue3-study.html#手动停止监听器)
+
+  [11.computed](./frontend/vue/vue3-study.html#computed)
+
+  [12.依赖注入](./frontend/vue/vue3-study.html#依赖注入)
+
+  [13.refs获取DOM](./frontend/vue/vue3-study.html#refs-获取-dom)
+
+  [14.组件传值](./frontend/vue/vue3-study.html#组件传值)
+
+  [15.pinia](./frontend/vue/vue3-study.html#pinia)
+
+  [16.pinia持久化](./frontend/vue/vue3-study.html#pinia-持久化)
+:::
+
+## 五、其他
+### 正则规则
+::: info 目录：
+  通用正则
+
+  [1.密码校验规则](./other/regular/regular-check.html#密码校验规则)
+
+  [2.手机号校验规则](./other/regular/regular-check.html#手机号校验规则)
+:::
+### 网站安全
+::: info 目录：
+  网站安全
+
+  [1.安全优化](./other/safety/safety.html#安全优化)
 :::
