@@ -3,6 +3,7 @@ module.exports = {
   base: "/work-note-vitepress/",
   themeConfig: {
     nav: navConf,
+    siteTitle: "前端奇思妙想",
     sidebar: {
       "/frontend/css/": [
         {
@@ -97,6 +98,10 @@ module.exports = {
           ],
         },
       ],
+    },
+    footer: {
+      message: "勤勤恳恳的小码农",
+      copyright: "先占个位置吧",
     },
   },
 };
