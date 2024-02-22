@@ -21,7 +21,9 @@
 ::: info 目录：
   [1.字典值回显](./frontend/js/js-method.html#字典值回显)
 
-  [2.数组对象去重](./frontend/js/js-method.html#数组对象去重)
+  [2.数组对象去重(单个key)](./frontend/js/js-method.html#数组对象去重-单个key)
+
+  [2.数组对象去重(多个key)](./frontend/js/js-method.html#数组对象去重-多个key)
 :::
 
 ## 三、ES6
