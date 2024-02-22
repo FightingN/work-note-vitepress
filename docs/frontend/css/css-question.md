@@ -1,7 +1,17 @@
-## 全局修改element弹框默认的样式
-```css
-/* vue3修改：在项目src > assets > styles > element-ui.scss 文件下写入以下代码 */
+<script setup>
+import { withBase } from 'vitepress'
+</script>
 
+## 全局修改Dialog对话框样式
+<img :src="withBase('/img/cssImg/dialog.png')" alt="图片描述">
+
+::: tip 修改原因：
+智慧班组项目ui统一将新增/修改弹框设计成了圆角，弹框标题居中展示，因此配套的激活中心样式需和智慧班组统一。
+:::
+#### vue3修改：
+
+1. 在项目src > assets > styles > element-ui.scss 文件下写入以下代码
+```css
 .el-dialog__header{
   text-align: center;
 }
@@ -30,11 +40,35 @@
     margin-left: 36px;
   }
 }
+```
 
+
+## 全局修改button按钮样式
+<img :src="withBase('/img/cssImg/button.png')" alt="图片描述">
+
+::: tip 修改原因：
+智慧班组项目ui统一将按钮设计成了圆角，因此配套的激活中心样式需和智慧班组统一。
+:::
+#### vue3修改：
+
+1. 在项目src > assets > styles > element-ui.scss 文件下写入以下代码
+```css
 .el-button.is-plain{
   border-radius: 20px;
 }
+```
 
+
+## 全局修改MessageBox消息弹框样式
+<img :src="withBase('/img/cssImg/mesBox.png')" alt="图片描述">
+
+::: tip 修改原因：
+智慧班组项目ui统一将MessageBox消息弹框的按钮设计成了圆角、确定在左、取消在右，因此配套的激活中心样式需和智慧班组统一。
+:::
+#### vue3修改：
+
+1. 在项目src > assets > styles > element-ui.scss 文件下写入以下代码
+```css
 .el-message-box{
   .el-message-box__btns{
     justify-content: flex-start;
@@ -48,10 +82,17 @@
 }
 ```
 
+
 ## 页面顶部高级搜索样式调整
+<img :src="withBase('/img/cssImg/search.png')" alt="图片描述">
+
+::: tip 修改原因：
+智慧班组项目中为解决列表搜索条件过多问题统一设计了高级搜索的ui样式，因此配套的激活中心样式需和智慧班组统一。
+:::
+#### vue3修改：
+
+1. 在项目src > assets > styles > element-ui.scss 文件下写入以下代码
 ```css
-/* vue3修改：*/
-/* 1.在项目src > assets > styles > element-ui.scss 文件下写入以下代码 */
 .search-form-all{
   .el-form-item{
     margin-right: 10px;
@@ -89,9 +130,10 @@
   }
 }
 ```
+
+2. 在页面顶部搜索的表单中添加class类名为'search-form-all'即可
 ```html
-<!-- 2.在页面顶部搜索的表单中添加class类名为'search-form-all'即可 -->
-<el-form :model="queryParams" class="search-form-all" ref="queryRef" :inline="true" label-width="70px">
+<el-form class="search-form-all" :model="queryParams">
   <el-form-item label="项目名称" prop="projectName">
     <el-input v-model.trim="queryParams.projectName" placeholder="请输入项目名称" maxlength="20" clearable @keyup.enter="handleQuery" />
   </el-form-item>
@@ -103,8 +145,16 @@
 ```
 
 ## 全局强改颜色样式
+<img :src="withBase('/img/cssImg/color.png')" alt="图片描述">
+
+::: tip 修改原因：
+智慧班组项目有时会出现颜色加载失败的问题，为解决此问题，决定强制修改element ui的颜色。
+:::
+#### vue2修改：
+
+1.在项目src > assets > styles > element-ui.scss 文件下写入以下代码
 ```css
-/* vue2修改：在项目src > assets > styles > element-ui.scss 文件下写入以下代码 */
+/*  */
 .el-button.btn_addAll{
   color: #ff5500 !important;
 }
