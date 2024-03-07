@@ -50,6 +50,10 @@
 
   [2.el-select多选隐藏被禁用选项的关闭按钮](./frontend/vue/vue-question.html#el-select多选隐藏被禁用选项的关闭按钮)
 
+  [3.el-input输入框仅允许输入数字](./frontend/vue/vue-question.html#el-input输入框仅允许输入数字)
+
+  [4.点击删除按钮弹出提示框后摁下空格-回车会执行确认删除的操作问题](./frontend/vue/vue-question.html#点击删除按钮弹出提示框后摁下空格-回车会执行确认删除的操作问题)
+
   知识点相关
 
   [1.知识点记录](./frontend/vue/vue-study.md)
@@ -117,4 +121,10 @@
   网站安全
 
   [1.安全优化](./other/safety/safety.html#安全优化)
+:::
+### npm依赖相关
+::: info 目录：
+  npm依赖相关
+
+  [1.项目npm-install时报依赖项版本不兼容的解析错误](./other/npm/npm.html#项目npm-install时报依赖项版本不兼容的解析错误)
 :::
