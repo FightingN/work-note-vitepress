@@ -10,7 +10,7 @@ module.exports = {
           text: "CSS",
           items: [
             {
-              text: "CSS问题记录",
+              text: "CSS项目问题记录",
               link: "/frontend/css/css-question",
             },
           ],
