@@ -15,7 +15,7 @@ git add .
 git commit -m 'deploy'
 
 # 部署到 https://<username>.github.io/<repo>
-git push -f git@github.com:FightingN/work-note-vitepress.git master:gh-pages
+git push -f git@github.com:FightingN/work-note-vitepress.git main:gh-pages
 
 
 
