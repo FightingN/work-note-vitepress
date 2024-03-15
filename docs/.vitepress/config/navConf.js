@@ -25,6 +25,23 @@ module.exports = [
     ],
   },
   {
+    text: "IOS",
+    items: [
+      {
+        text: "Object-C",
+        link: "/IOS/Object-C/oc-question",
+      },
+      {
+        text: "Mac",
+        link: "/IOS/Object-C/mac-question",
+      },
+      {
+        text: "智慧班组",
+        link: "/IOS/Object-C/teammeeting",
+      },
+    ],
+  },
+  {
     text: "其他",
     items: [
       {
