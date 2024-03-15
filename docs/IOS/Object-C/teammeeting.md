@@ -7,9 +7,15 @@ import { withBase } from 'vitepress'
 
 ## 一、会议事项相关改动
 ```objective-c
+//普通会议详情页面
 "会议详情"  //常显
 "字幕"     //"app:meeting:groupFill" && meetingStatus=2 && captionFlag=1
 "事项统计"  //"app:meeting:matterStat" && meetingStatus>0
+
+//看板会议详情页面
+"会议详情"  //常显
+"字幕"     //meetingStatus=2,3,5 && captionFlag=1
+"事项统计"  //meetingStatus=2,3,5 &&
 ```
 
 #### 1.会议详情-会议事项
