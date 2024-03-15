@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as t,a2 as r}from"./chunks/framework.DxjWT_Fp.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"catalog.md","filePath":"catalog.md"}'),s={name:"catalog.md"},o=r("",18),h=[o];function n(l,u,c,d,p,f){return t(),a("div",null,h)}const v=e(s,[["render",n]]);export{m as __pageData,v as default};
