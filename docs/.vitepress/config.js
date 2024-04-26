@@ -35,6 +35,10 @@ module.exports = {
               text: "数组相关",
               link: "/frontend/es6/es6-arr",
             },
+            {
+              text: "es6总结",
+              link: "/frontend/es6/es6",
+            },
           ],
         },
       ],
@@ -76,10 +80,10 @@ module.exports = {
           ],
         },
       ],
-      "IOS/Object-C" : [
+      "IOS/Object-C": [
         {
-          text : "IOS",
-          items : [
+          text: "IOS",
+          items: [
             {
               text: "Object-C",
               link: "/IOS/Object-C/oc-question",
