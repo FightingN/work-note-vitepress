@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as t,R as r}from"./chunks/framework.4Tex8Uls.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"catalog.md","filePath":"catalog.md"}'),s={name:"catalog.md"},o=r("",18),h=[o];function n(l,u,c,d,p,f){return a(),t("div",null,h)}const v=e(s,[["render",n]]);export{m as __pageData,v as default};

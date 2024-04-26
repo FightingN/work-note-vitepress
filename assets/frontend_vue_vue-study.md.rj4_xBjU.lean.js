@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as n}from"./chunks/framework.4Tex8Uls.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"frontend/vue/vue-study.md","filePath":"frontend/vue/vue-study.md"}'),r={name:"frontend/vue/vue-study.md"};function a(o,s,d,c,u,f){return t(),n("div")}const i=e(r,[["render",a]]);export{_ as __pageData,i as default};
