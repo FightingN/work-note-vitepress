@@ -35,6 +35,10 @@ module.exports = {
               text: "数组相关",
               link: "/frontend/es6/es6-arr",
             },
+            {
+              text: "es6总结",
+              link: "/frontend/es6/es6",
+            },
           ],
         },
       ],
@@ -72,6 +76,25 @@ module.exports = {
             {
               text: "知识点记录",
               link: "/frontend/vue/vue3-study",
+            },
+          ],
+        },
+      ],
+      "IOS/Object-C": [
+        {
+          text: "IOS",
+          items: [
+            {
+              text: "Object-C",
+              link: "/IOS/Object-C/oc-question",
+            },
+            {
+              text: "Mac",
+              link: "/IOS/Object-C/mac-question",
+            },
+            {
+              text: "智慧班组",
+              link: "/IOS/Object-C/teammeeting",
             },
           ],
         },

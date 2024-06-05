@@ -1028,7 +1028,7 @@ mitt.on("mittFn", (res) => {
 
 ## pinia
 
-[官网](pinia.vuejs.org/)
+[官网](https://pinia.vuejs.org/)
 [参考链接](https://juejin.cn/post/7057439040911441957)
 
 - pinia 核心概念
