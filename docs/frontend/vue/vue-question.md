@@ -132,26 +132,15 @@ Vue.use(directive);
 </el-select>
 ```
 
-## el-input 输入框仅允许输入数字
-
+## el-input输入框仅允许输入数字
 ::: tip 问题说明：
-当输入框的内容只允许输入数字时（如根据 id 查询列表）。
+当输入框的内容只允许输入数字时（如根据id查询列表）。
 :::
-
-1.给 el-input 标签绑定 input 事件
-
+1.给el-input标签绑定input事件
 ```html
 <el-form-item label="事项ID" prop="id">
-  <el-input v-model.trim="queryParams.id" @input="handleInput" />
+  <el-input v-model.trim="queryParams.id" @input="(v) => (queryParams.id = v.replace(/[^\d]/g, ''))" />
 </el-form-item>
-```
-
-2.在页面中写入 input 事件对应的"handleInput"方法
-
-```js
-handleInput() {
-  this.queryParams.id = this.queryParams.id.replace(/\D/g, '')
-}
 ```
 
 ## 点击删除按钮弹出提示框后摁下空格/回车会执行确认删除的操作问题
@@ -399,4 +388,33 @@ methods: {
         }
       }
     },
+```
+
+
+## 密码框点击后面小眼睛图标不能跟随明文切换的问题
+<img :src="withBase('/img/vueImg/passwordIcon.png')" alt="图片描述">
+
+::: tip 问题说明：
+el-input自带的密码框切换明文显示时，图标和内容无法相对，体验感不加。
+:::
+1.在data中定义flagNewPassword，默认值为false
+
+2.在computed中写入以下代码
+```js
+computed: {
+  typeNewPassword() { // input类型
+    return this.flagNewPassword ? 'text' : 'password'
+  },
+  elIconsNewPassword() { // input图标显示
+    return this.flagNewPassword ? 'el-icon-view' : 'el-icon-cloce-eye'
+  },
+},
+```
+
+3.给图标绑定click事件，根据input类型动态显示图标
+```html
+<el-form-item label="新密码" prop="newPassword">
+  <el-input v-model.trim="user.newPassword" :type="typeNewPassword" />
+  <i @click="flagNewPassword = !flagNewPassword" :class="user.newPassword ? elIconsNewPassword : ''"></i>
+</el-form-item>
 ```

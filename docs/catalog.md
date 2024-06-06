@@ -54,6 +54,14 @@
 
   [4.点击删除按钮弹出提示框后摁下空格-回车会执行确认删除的操作问题](./frontend/vue/vue-question.html#点击删除按钮弹出提示框后摁下空格-回车会执行确认删除的操作问题)
 
+  [5.h5-判断设备型号](./frontend/vue/vue-question.html#h5-判断设备型号)
+
+  [6.node-多版本管理](./frontend/vue/vue-question.html#node-多版本管理)
+
+  [7.vant-中的-cascader-级联选择异步加载地区数据](./frontend/vue/vue-question.html#vant-中的-cascader-级联选择异步加载地区数据)
+
+  [8.密码框点击后面小眼睛图标不能跟随明文切换的问题](./frontend/vue/vue-question.html#密码框点击后面小眼睛图标不能跟随明文切换的问题)
+
   知识点相关
 
   [1.知识点记录](./frontend/vue/vue-study.md)
