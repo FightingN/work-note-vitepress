@@ -143,6 +143,83 @@ Vue.use(directive);
 </el-form-item>
 ```
 
+
+## el-cascader多级区域加载的相关问题
+::: tip 问题说明：
+记录一下el-cascader多级区域加载的实现，以及数据清空数据后的样式问题。
+:::
+```html
+<el-form-item label="区域" prop="divisionIds">
+  <el-cascader v-model="queryParams.divisionIds" :options="divisionTreeList" :props="divisionProps" popper-class="cascader" ref="myCascader" @change="changeCascaderDivisionIds" clearable placeholder="请选择区域" ></el-cascader>
+</el-form-item>
+```
+1.变量部分
+```js
+data() {
+  return{
+    divisionTreeList: [], // 区域树数据
+    divisionProps: {
+      children: 'childrenList',
+      label: 'name',
+      value: 'id',
+      expandTrigger: 'hover',
+      checkStrictly: true, //来设置父子节点取消选中关联，从而达到选择任意一级选项的目的
+      lazy: true, // 开启懒加载
+      lazyLoad: this.loadTreeNode, // 设置加载数据源的方法
+    },
+  }
+},
+```
+
+2.首次进入页面先调用接口展示一级数据
+```js
+created() {
+  this.getAreaList()
+},
+methods: {
+  async getAreaList(id = '') {
+    let res = await getAreaList(id)
+    this.divisionTreeList = res.data || []
+  },
+}
+```
+
+3.悬浮到某个节点时动态加载下一级内容（el-cascader的加载数据源的方法）
+```js
+methods: {
+  loadTreeNode(node, resolve){
+    if(node.value){
+      let nodeItem = []
+      getAreaList(node.value).then(res => {
+        res.data?.forEach(item => {
+          nodeItem.push({
+            name: item.name,
+            id: item.id,
+          })
+        })
+        resolve(nodeItem) // 通过调用resolve将子节点数据返回，通知组件数据加载完成
+      }).catch(err => {
+        console.log('err---级联', err)
+      })
+    }
+  },
+}
+```
+
+4.选择多级数据再清空点开级联后，将样式还原（el-cascader的change方法）
+```js
+methods: {
+  changeCascaderDivisionIds(value) {
+    if(value.length == 0){
+      this.$refs.myCascader.$refs.panel.activePath = []  // 清除高亮
+      this.$refs.myCascader.$refs.panel.syncActivePath()   //只展示一级节点
+    }
+    this.$refs.myCascader.dropDownVisible = false
+  },
+}
+```
+
+
 ## 点击删除按钮弹出提示框后摁下空格/回车会执行确认删除的操作问题
 
 <img :src="withBase('/img/vueImg/btnDel.png')" alt="图片描述">

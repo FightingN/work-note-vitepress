@@ -52,15 +52,17 @@
 
   [3.el-input输入框仅允许输入数字](./frontend/vue/vue-question.html#el-input输入框仅允许输入数字)
 
-  [4.点击删除按钮弹出提示框后摁下空格-回车会执行确认删除的操作问题](./frontend/vue/vue-question.html#点击删除按钮弹出提示框后摁下空格-回车会执行确认删除的操作问题)
+  [4.el-cascader多级区域加载的相关问题](./frontend/vue/vue-question.html#el-cascader多级区域加载的相关问题)
 
-  [5.h5-判断设备型号](./frontend/vue/vue-question.html#h5-判断设备型号)
+  [5.点击删除按钮弹出提示框后摁下空格-回车会执行确认删除的操作问题](./frontend/vue/vue-question.html#点击删除按钮弹出提示框后摁下空格-回车会执行确认删除的操作问题)
 
-  [6.node-多版本管理](./frontend/vue/vue-question.html#node-多版本管理)
+  [6.h5-判断设备型号](./frontend/vue/vue-question.html#h5-判断设备型号)
 
-  [7.vant-中的-cascader-级联选择异步加载地区数据](./frontend/vue/vue-question.html#vant-中的-cascader-级联选择异步加载地区数据)
+  [7.node-多版本管理](./frontend/vue/vue-question.html#node-多版本管理)
 
-  [8.密码框点击后面小眼睛图标不能跟随明文切换的问题](./frontend/vue/vue-question.html#密码框点击后面小眼睛图标不能跟随明文切换的问题)
+  [8.vant-中的-cascader-级联选择异步加载地区数据](./frontend/vue/vue-question.html#vant-中的-cascader-级联选择异步加载地区数据)
+
+  [9.密码框点击后面小眼睛图标不能跟随明文切换的问题](./frontend/vue/vue-question.html#密码框点击后面小眼睛图标不能跟随明文切换的问题)
 
   知识点相关
 
