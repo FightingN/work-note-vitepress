@@ -132,28 +132,44 @@ Vue.use(directive);
 </el-select>
 ```
 
-## el-input输入框仅允许输入数字
+## el-input 输入框仅允许输入数字
+
 ::: tip 问题说明：
-当输入框的内容只允许输入数字时（如根据id查询列表）。
-:::
-1.给el-input标签绑定input事件
+当输入框的内容只允许输入数字时（如根据 id 查询列表）。
+::: 1.给 el-input 标签绑定 input 事件
+
 ```html
 <el-form-item label="事项ID" prop="id">
-  <el-input v-model.trim="queryParams.id" @input="(v) => (queryParams.id = v.replace(/[^\d]/g, ''))" />
+  <el-input
+    v-model.trim="queryParams.id"
+    @input="(v) => (queryParams.id = v.replace(/[^\d]/g, ''))"
+  />
 </el-form-item>
 ```
 
+## el-cascader 多级区域加载的相关问题
 
-## el-cascader多级区域加载的相关问题
 ::: tip 问题说明：
-记录一下el-cascader多级区域加载的实现，以及数据清空数据后的样式问题。
+记录一下 el-cascader 多级区域加载的实现，以及数据清空数据后的样式问题。
 :::
+
 ```html
 <el-form-item label="区域" prop="divisionIds">
-  <el-cascader v-model="queryParams.divisionIds" :options="divisionTreeList" :props="divisionProps" popper-class="cascader" ref="myCascader" @change="changeCascaderDivisionIds" clearable placeholder="请选择区域" ></el-cascader>
+  <el-cascader
+    v-model="queryParams.divisionIds"
+    :options="divisionTreeList"
+    :props="divisionProps"
+    popper-class="cascader"
+    ref="myCascader"
+    @change="changeCascaderDivisionIds"
+    clearable
+    placeholder="请选择区域"
+  ></el-cascader>
 </el-form-item>
 ```
+
 1.变量部分
+
 ```js
 data() {
   return{
@@ -172,6 +188,7 @@ data() {
 ```
 
 2.首次进入页面先调用接口展示一级数据
+
 ```js
 created() {
   this.getAreaList()
@@ -184,7 +201,8 @@ methods: {
 }
 ```
 
-3.悬浮到某个节点时动态加载下一级内容（el-cascader的加载数据源的方法）
+3.悬浮到某个节点时动态加载下一级内容（el-cascader 的加载数据源的方法）
+
 ```js
 methods: {
   loadTreeNode(node, resolve){
@@ -206,7 +224,8 @@ methods: {
 }
 ```
 
-4.选择多级数据再清空点开级联后，将样式还原（el-cascader的change方法）
+4.选择多级数据再清空点开级联后，将样式还原（el-cascader 的 change 方法）
+
 ```js
 methods: {
   changeCascaderDivisionIds(value) {
@@ -218,7 +237,6 @@ methods: {
   },
 }
 ```
-
 
 ## 点击删除按钮弹出提示框后摁下空格/回车会执行确认删除的操作问题
 
@@ -467,16 +485,18 @@ methods: {
     },
 ```
 
-
 ## 密码框点击后面小眼睛图标不能跟随明文切换的问题
+
 <img :src="withBase('/img/vueImg/passwordIcon.png')" alt="图片描述">
 
 ::: tip 问题说明：
-el-input自带的密码框切换明文显示时，图标和内容无法相对，体验感不加。
+el-input 自带的密码框切换明文显示时，图标和内容无法相对，体验感不加。
 :::
-1.在data中定义flagNewPassword，默认值为false
 
-2.在computed中写入以下代码
+1.在 data 中定义 flagNewPassword，默认值为 false
+
+2.在 computed 中写入以下代码
+
 ```js
 computed: {
   typeNewPassword() { // input类型
@@ -488,10 +508,58 @@ computed: {
 },
 ```
 
-3.给图标绑定click事件，根据input类型动态显示图标
+3.给图标绑定 click 事件，根据 input 类型动态显示图标
+
 ```html
 <el-form-item label="新密码" prop="newPassword">
   <el-input v-model.trim="user.newPassword" :type="typeNewPassword" />
-  <i @click="flagNewPassword = !flagNewPassword" :class="user.newPassword ? elIconsNewPassword : ''"></i>
+  <i
+    @click="flagNewPassword = !flagNewPassword"
+    :class="user.newPassword ? elIconsNewPassword : ''"
+  ></i>
 </el-form-item>
 ```
+
+## 清空 el-form 的单独表单校验
+
+- 方案 1
+
+```html
+<el-form ref="form">
+  <el-form-item label="测试一下" prop="test"> </el-form-item>
+</el-form>
+```
+
+```js
+this.$refs.form.clearValidate("test"); // 清除某一个prop的校验
+```
+
+- 方案 2
+
+```html
+<el-form ref="form">
+  <el-form-item label="测试一下" prop="test" ref="testRef"> </el-form-item>
+</el-form>
+```
+
+```js
+this.$refs.testRef.clearValidate();
+```
+
+## 表单中防止搜索框回车键刷新整个页面
+
+- form 表单中只有一个输入框，在输入框中按下回车就是提交该表单，且会刷新页面。阻止这一默认行为，可以 在 标签上添加 @submit.native.prevent
+- 搜索条件只有一个输入框时,如果使用了@keyup.enter.native=“handleQuery” 原始键盘回车事件来触发搜索操作,会对整个页面都进行刷新,想让页面不刷新,可使用 @submit.native.prevent 原始提交事件
+- ‌@keyup.enter.native 的作用是监听用户在输入框中按下回车键的事件，并在事件触发时执行特定的方法或函数
+
+```html
+<el-form ref="form" @submit.native.prevent>
+  <el-form-item label="测试一下" prop="test">
+    <el-input v-model.trim="user.test" @keyup.enter.native="handleQuery" />
+  </el-form-item>
+</el-form>
+```
+
+- @submit.native.prevent
+- .native 表示对一个组件绑定系统原生事件
+- .prevent 表示提交以后不刷新页面
